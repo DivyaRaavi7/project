@@ -12,7 +12,7 @@ export default function AddProduct() {
     }
     function addProduct(e) {
         e.preventDefault()
-        axios.post("http://localhost:5003/api/product/add", formData, {
+        axios.post("https://project-s4mg.onrender.com/api/product/add", formData, {
             headers: { Authorization: `Bearer ${user.token}` }
         })
             .then((res) => {

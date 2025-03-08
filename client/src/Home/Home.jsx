@@ -11,7 +11,7 @@ export default function Home() {
     fetchProducts();
   },[])
   async function fetchProducts(){
-    await axios.get("http://localhost:5003/api/product")
+    await axios.get("https://project-s4mg.onrender.com/api/product")
       .then((res)=>{
         console.log(res)
         setProducts(res.data)
@@ -27,7 +27,7 @@ export default function Home() {
       return 
     }
     try{
-      await axios.post("http://localhost:5000/api/cart/add",{productId},{
+      await axios.post("https://project-s4mg.onrender.com/api/cart/add",{productId},{
         headers:{Authorization:`Bearer ${user.token}`}
       })
         .then((res)=>{
